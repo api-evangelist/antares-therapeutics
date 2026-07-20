@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://antaresrx.com/wp-json/
+api: antares-therapeutics-wordpress-rest
+summary: >-
+  Antares Therapeutics operates no product API and therefore publishes no developer
+  authentication programme -- there is no signup, no API key issuance, no OAuth
+  authorization server and no OIDC discovery document (all /.well-known/ probes
+  returned 404). The only authenticated surface on the domain is the WordPress REST
+  API behind the marketing site, which advertises WordPress Application Passwords
+  in its root discovery document. That mechanism is for site administrators, not for
+  third-party developers, and no self-service path to obtain a credential exists.
+public_access:
+  anonymous_reads: true
+  note: >-
+    Published content under the wp/v2 namespace (posts, and the newsroom categories
+    that back the press-release and in-the-media feeds) is readable without any
+    credential. Verified by an unauthenticated GET of /wp-json/wp/v2/posts, which
+    returned published newsroom items.
+  writes_require_auth: true
+security_schemes:
+- id: application_passwords
+  type: http
+  scheme: basic
+  observed_in: >-
+    The `authentication` block of the /wp-json/ root document:
+    application-passwords.endpoints.authorization
+  authorization_endpoint: https://antaresrx.com/wp-admin/authorize-application.php
+  audience: site administrators
+  self_service: false
+  note: >-
+    WordPress Application Passwords are per-user credentials minted from wp-admin
+    and sent as HTTP Basic. They are not issued to external developers and confer
+    CMS-level rather than product-level access.
+oauth2: false
+openid_connect: false
+mutual_tls: false
+api_keys: false
+scopes:
+  present: false
+  note: >-
+    No OAuth scope surface exists. WordPress authorizes by user capability/role, not
+    by scope, so scopes/ is intentionally not produced for this provider.
+documentation:
+  provider_auth_docs: none
+  note: >-
+    Antares publishes no authentication documentation. The mechanism above is
+    WordPress platform behaviour observed on the live host, not a documented Antares
+    developer contract.
