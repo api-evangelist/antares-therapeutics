@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  Registry and web searches across npm, PyPI, Maven Central, NuGet, pkg.go.dev,
+  RubyGems, Packagist and crates.io, plus the antaresrx.com corporate site.
+summary: >-
+  Antares Therapeutics publishes no first-party client libraries, SDKs or CLI
+  binaries in any public package registry. The company is a private,
+  preclinical-stage biotechnology company with no product API and therefore no
+  developer distribution surface. Packages named "antares" that do exist in the
+  public registries belong to entirely unrelated projects (an energy-system
+  simulator, a Microsoft kernel-generation engine, and unrelated vendors sharing
+  the Antares name) and are explicitly NOT attributed to this company. Recorded so
+  the absence is auditable and future re-runs do not re-attribute name collisions.
+packages: []
+false_positives:
+- name: antares
+  registry: pypi
+  url: https://pypi.org/project/antares/
+  note: Unrelated project; not published by Antares Therapeutics.
+- name: Antares-Launcher
+  registry: pypi
+  url: https://pypi.org/project/Antares-Launcher/
+  note: AntaresSimulator energy-system tooling; unrelated.
+- name: microsoft/antares
+  registry: github
+  url: https://github.com/microsoft/antares
+  note: Microsoft kernel-generation engine; unrelated.
+github_organization:
+  found: false
+  note: >-
+    No GitHub organization is linked from antaresrx.com and no org matching the
+    company could be identified. The github.com/antares-tech, antares-solutions and
+    antaresdocumentation orgs are unrelated third parties.

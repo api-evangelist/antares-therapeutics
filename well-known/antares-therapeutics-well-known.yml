@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://antaresrx.com/.well-known/
+host: https://antaresrx.com
+summary: >-
+  No /.well-known/ discovery documents are published on the Antares Therapeutics
+  corporate domain. Every probed path returned 404. There is no security.txt, no
+  OAuth/OIDC discovery metadata, no API catalog and no AI plugin manifest. This is
+  the expected result for a preclinical-stage biotechnology company whose only web
+  property is a WordPress marketing site. Recorded so the absence is auditable and
+  re-runs do not re-probe blindly.
+documents:
+- path: /.well-known/security.txt
+  spec: RFC 9116
+  status: 404
+- path: /.well-known/openid-configuration
+  spec: OpenID Connect Discovery 1.0
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  spec: RFC 8414
+  status: 404
+- path: /.well-known/api-catalog
+  spec: RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  spec: OpenAI plugin manifest
+  status: 404
+other_probes:
+- path: /llms.txt
+  status: 404
+- path: /robots.txt
+  status: 200
+- path: /sitemap.xml
+  status: 200
+subdomains_probed:
+  note: >-
+    Common developer-surface subdomains were resolved via DNS. None resolve, which
+    confirms there is no developer portal, API host, status page or trust center.
+  results:
+  - host: api.antaresrx.com
+    dns: NXDOMAIN
+  - host: developer.antaresrx.com
+    dns: NXDOMAIN
+  - host: docs.antaresrx.com
+    dns: NXDOMAIN
+  - host: status.antaresrx.com
+    dns: NXDOMAIN
+  - host: trust.antaresrx.com
+    dns: NXDOMAIN

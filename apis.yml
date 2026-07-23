@@ -1,23 +1,125 @@
 aid: antares-therapeutics
 name: Antares Therapeutics
-description: Antares Therapeutics is a company surfaced as a portfolio company of lightspeed-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Antares Therapeutics is a Boston- and South San Francisco-based precision medicine
+  company developing small-molecule therapies against validated but previously
+  undruggable targets in cancer and other serious diseases. Spun out of Scorpion
+  Therapeutics following Eli Lilly's March 2025 acquisition of Scorpion, Antares
+  launched in June 2025 with a $177 million Series A co-led by Omega Funds, Atlas
+  Venture, Lightspeed Venture Partners, BVF Partners and Cormorant Asset Management.
+  The company combines medicinal chemistry (proprietary compound libraries and
+  next-generation mass spectrometry to find new chemical pockets), target biology
+  (first-in-class preclinically validated targets and allosteric approaches to
+  clinically validated ones), and predictive sciences (physics-based modeling,
+  machine learning and molecular dynamics) to shorten discovery cycles. Its most
+  advanced program is expected to enter the clinic in 2026, with multiple additional
+  preclinical programs and discovery collaborations with Novartis, AstraZeneca and
+  Pierre Fabre Laboratories. Antares is a private, preclinical-stage biotechnology
+  company and publishes no public product API, developer portal or SDK surface.
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://antaresrx.com/wp-content/uploads/2025/06/logo-antaresrx-2x.png
 url: https://raw.githubusercontent.com/api-evangelist/antares-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - lightspeed-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: no-public-api-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Biotechnology
+- Pharmaceuticals
+- Precision Medicine
+- Oncology
+- Drug Discovery
+- Life Sciences
+- Machine Learning
+apis:
+- aid: antares-therapeutics-wordpress-rest
+  name: Antares Therapeutics WordPress REST API
+  description: >-
+    The public WordPress REST API behind antaresrx.com. This is the content
+    management surface for the corporate marketing site and its press-release /
+    in-the-media newsroom -- it is NOT a first-party product API. Anonymous reads
+    of published posts, pages, categories, media and tags are available under the
+    wp/v2 namespace; all write operations and the site's MCP adapter route require
+    authentication and return 401 to anonymous callers. Recorded here because it is
+    a real, fetchable API surface on the company domain and it is what feeds the
+    newsroom RSS pull.
+  humanURL: https://antaresrx.com/wp-json/
+  baseURL: https://antaresrx.com/wp-json/wp/v2
+  tags:
+  - Content
+  - WordPress
+  - Newsroom
+  properties:
+  - type: Authentication
+    url: authentication/antares-therapeutics-authentication.yml
+  - type: Blog
+    url: https://antaresrx.com/category/press-release/
+  - type: BlogRSS
+    url: https://antaresrx.com/feed/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/antares-therapeutics-domain-security.yml
+- type: Website
+  url: https://antaresrx.com
+- type: Blog
+  url: https://antaresrx.com/category/press-release/
+- type: BlogRSS
+  url: https://antaresrx.com/feed/
+- type: News
+  url: https://antaresrx.com/category/in-the-media/
+- type: Careers
+  url: https://job-boards.greenhouse.io/antaresrx
+- type: TermsOfService
+  url: https://antaresrx.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://antaresrx.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/antares-therapeutics/
+- type: Twitter
+  url: https://x.com/antares_rx
+- type: Instagram
+  url: https://www.instagram.com/antares_rx
+- type: WellKnown
+  url: well-known/antares-therapeutics-well-known.yml
+- type: Authentication
+  url: authentication/antares-therapeutics-authentication.yml
+- type: Packages
+  url: packages/antares-therapeutics-packages.yml
+- type: LLMsTxt
+  url: llms/antares-therapeutics-llms.txt
+- type: VulnerabilityDisclosure
+  url: security/antares-therapeutics-vulnerability-disclosure.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+  note: >-
+    No product API, developer portal, SDK, sandbox, changelog or status page exists.
+    An MCP endpoint was found on the domain but it is the WordPress MCP Adapter
+    plugin and returns 401; it is deliberately NOT wired as type MCPServer. No
+    first-party packages exist in any registry, and no vulnerability disclosure
+    programme or trust center was verified, so no SDKs, Security or Compliance
+    pointers are emitted.

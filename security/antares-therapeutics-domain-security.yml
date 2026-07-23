@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: antaresrx.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  4 13:10:50 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: antaresrx.com
+  dnssec: false
+  caa: []
+  caa_note: >-
+    No CAA records published. The initial probe recorded a resolver timeout; re-probed
+    against 8.8.8.8 and 1.1.1.1 on 2026-07-19, both returned an empty answer.
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

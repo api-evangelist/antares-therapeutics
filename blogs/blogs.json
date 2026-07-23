@@ -1,0 +1,21 @@
+{
+  "repo": "antares-therapeutics",
+  "feeds": [
+    {
+      "source": "https://antaresrx.com/category/press-release/",
+      "feed_url": "https://antaresrx.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://antaresrx.com",
+      "feed_url": "https://antaresrx.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-20T13:31:34Z"
+}
