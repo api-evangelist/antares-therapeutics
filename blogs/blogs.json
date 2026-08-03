@@ -2,6 +2,13 @@
   "repo": "antares-therapeutics",
   "feeds": [
     {
+      "source": "https://antaresrx.com/feed/",
+      "feed_url": "https://antaresrx.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://antaresrx.com/category/press-release/",
       "feed_url": "https://antaresrx.com/feed/",
       "title": "",
@@ -16,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-07-20T13:31:34Z"
+  "post_count": 6,
+  "fetched": "2026-08-01T15:49:00Z"
 }
