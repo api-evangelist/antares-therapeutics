@@ -79,6 +79,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  url: mcp/antares-therapeutics-mcp.yml
 - type: DomainSecurity
   url: security/antares-therapeutics-domain-security.yml
 - type: Website
