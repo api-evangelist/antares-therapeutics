@@ -1,16 +1,14 @@
 generated: '2026-07-19'
 method: searched
 source: https://antaresrx.com/wp-json/mcp
-status: not-public
-summary: >-
-  Antares Therapeutics publishes no product MCP server. An MCP endpoint IS present
-  on the corporate domain, but it is an incidental artifact of the WordPress MCP
-  Adapter plugin installed on the marketing site's CMS -- not a first-party,
-  intentional agent surface for the company's science or data. It rejects anonymous
-  callers with HTTP 401, so no tool list could be enumerated. Recorded here for
-  auditability and explicitly NOT wired as a `type: MCPServer` pointer in apis.yml:
-  emitting that pointer would credit the company with an agent surface it does not
-  actually offer.
+status: gated
+status_raw: not-public
+summary: 'Antares Therapeutics publishes no product MCP server. An MCP endpoint IS present on the corporate
+  domain, but it is an incidental artifact of the WordPress MCP Adapter plugin installed on the marketing
+  site''s CMS -- not a first-party, intentional agent surface for the company''s science or data. It rejects
+  anonymous callers with HTTP 401, so no tool list could be enumerated. Recorded here for auditability
+  and explicitly NOT wired as a `type: MCPServer` pointer in apis.yml: emitting that pointer would credit
+  the company with an agent surface it does not actually offer.'
 endpoints_probed:
 - path: /wp-json/mcp
   method: GET
@@ -24,18 +22,20 @@ endpoints_probed:
   method: POST
   rpc: tools/list
   status: 401
-  note: >-
-    Read-only JSON-RPC capability handshake. Rejected before any tool listing was
-    returned; no tools are known and none are recorded here.
+  note: Read-only JSON-RPC capability handshake. Rejected before any tool listing was returned; no tools
+    are known and none are recorded here.
 related:
 - namespace: wp-abilities/v1
   status: 200
-  note: >-
-    The WordPress Abilities API is also registered (categories are anonymously
-    listable; the abilities `/run` route is auth-gated). This is the plugin
-    substrate the MCP adapter exposes, again CMS-level rather than product-level.
+  note: The WordPress Abilities API is also registered (categories are anonymously listable; the abilities
+    `/run` route is auth-gated). This is the plugin substrate the MCP adapter exposes, again CMS-level
+    rather than product-level.
 tools: []
-assessment: >-
-  For network purposes Antares Therapeutics should be treated as having NO MCP
-  server. If the company later ships an intentional agent surface, this file should
-  be replaced and a `type: MCPServer` pointer added at that time.
+assessment: 'For network purposes Antares Therapeutics should be treated as having NO MCP server. If the
+  company later ships an intentional agent surface, this file should be replaced and a `type: MCPServer`
+  pointer added at that time.'
+deployment:
+  mode: unclear
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
