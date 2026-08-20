@@ -47,6 +47,15 @@ tags:
 - Oncology
 - Drug Discovery
 - Life Sciences
+- Machine-Learning
+tags_raw:
+- Company
+- Biotechnology
+- Pharmaceuticals
+- Precision Medicine
+- Oncology
+- Drug Discovery
+- Life Sciences
 - Machine Learning
 apis:
 - aid: antares-therapeutics-wordpress-rest
