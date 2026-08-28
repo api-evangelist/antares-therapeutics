@@ -16,6 +16,17 @@ description: >-
   preclinical programs and discovery collaborations with Novartis, AstraZeneca and
   Pierre Fabre Laboratories. Antares is a private, preclinical-stage biotechnology
   company and publishes no public product API, developer portal or SDK surface.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: open
