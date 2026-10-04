@@ -2,13 +2,6 @@
   "repo": "antares-therapeutics",
   "feeds": [
     {
-      "source": "https://antaresrx.com/category/press-release/",
-      "feed_url": "https://antaresrx.com/category/press-release/blog/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "discovered"
-    },
-    {
       "source": "https://antaresrx.com",
       "feed_url": "https://antaresrx.com/blog/feed/",
       "title": "",
@@ -16,15 +9,22 @@
       "method": "discovered"
     },
     {
-      "source": "https://antaresrx.com/category/press-release/blog/feed/",
+      "source": "https://antaresrx.com/category/press-release/",
       "feed_url": "https://antaresrx.com/category/press-release/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://antaresrx.com/blog/feed/",
+      "feed_url": "https://antaresrx.com/blog/feed/",
       "title": "",
       "saved": 0,
       "method": "feed"
     },
     {
-      "source": "https://antaresrx.com/blog/feed/",
-      "feed_url": "https://antaresrx.com/blog/feed/",
+      "source": "https://antaresrx.com/category/press-release/blog/feed/",
+      "feed_url": "https://antaresrx.com/category/press-release/blog/feed/",
       "title": "",
       "saved": 0,
       "method": "feed"
@@ -38,7 +38,7 @@
     }
   ],
   "post_count": 6,
-  "fetched": "2026-09-19T20:17:39Z",
+  "fetched": "2026-10-03T12:30:02Z",
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
   "feed_nature_note": "Whether these posts are the vendor publishing or its support community, decided on the URL path grammar of the saved posts -- not the hostname, which carries both on Khoros, and not author diversity, which flags large vendor blogs as forums. 'undetermined' means undetermined."

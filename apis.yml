@@ -54,7 +54,7 @@ tags:
 - Oncology
 - Drug Discovery
 - Life Sciences
-- Machine-Learning
+- Machine Learning
 tags_raw:
 - Company
 - Biotechnology
@@ -64,28 +64,22 @@ tags_raw:
 - Drug Discovery
 - Life Sciences
 - Machine Learning
+- Machine-Learning
 apis:
-- aid: antares-therapeutics:antares-therapeutics-wordpress-rest
-  name: Antares Therapeutics WordPress REST API
-  description: The public WordPress REST API behind antaresrx.com. This is the content management surface
-    for the corporate marketing site and its press-release / in-the-media newsroom -- it is NOT a first-party
-    product API. Anonymous reads of published posts, pages, categories, media and tags are available under
-    the wp/v2 namespace; all write operations and the site's MCP adapter route require authentication
-    and return 401 to anonymous callers. Recorded here because it is a real, fetchable API surface on
-    the company domain and it is what feeds the newsroom RSS pull.
-  humanURL: https://antaresrx.com/wp-json/
-  baseURL: https://antaresrx.com/wp-json/wp/v2
+- aid: antares-therapeutics:antaresrx-com-website-wordpress-rest
+  name: Antares Therapeutics Website (WordPress REST)
+  description: 'The public WordPress REST API (wp-json) of the Antares Therapeutics website at antaresrx.com:
+    the route index of the site''s content management system, catalogued as one site surface rather than
+    as separate APIs.'
+  baseURL: https://antaresrx.com/wp-json
   tags:
-  - Content
   - WordPress
-  - Newsroom
+  x-surface: platform-generated
   properties:
-  - type: Authentication
-    url: authentication/antares-therapeutics-authentication.yml
-  - type: Blog
-    url: https://antaresrx.com/category/press-release/
-  - type: BlogRSS
-    url: https://antaresrx.com/feed/
+  - type: Documentation
+    url: https://antaresrx.com/wp-json
+  x-platform: wordpress
+  x-platform-surface: rest
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
